@@ -33,7 +33,7 @@ This enforces the protocol's Hard Cap (24,000,000 $GNGA) at the code level: the 
 
 ### Ownership
 
-This contract inherits OpenZeppelin's `Ownable`, which grants the `owner` address the ability to call `renounceOwnership()` or `transferOwnership()`. Ownership was transferred post-deployment from the deployer wallet to **The Vault's Master Vault** (the protocol's 3-of-3 multi-signature Safe) — see [`gngaweb3/the-vault`](https://github.com/gngaweb3/the-vault) and the [Onchain Registry](https://gnga.tech/onchain-registry) for that address. No individual wallet holds owner privileges on this contract.
+This contract inherits OpenZeppelin's `Ownable`, which grants the `owner` address the ability to call `renounceOwnership()` or `transferOwnership()`. Ownership was transferred post-deployment from the deployer wallet to **The Vault's Master Vault** (the protocol's 3-of-3 multi-signature Safe) — see [`gngaweb3/the-vault`](https://github.com/gngaweb3/the-vault) and the [Onchain Registry](https://gnga.tech/transparencypage) for that address. No individual wallet holds owner privileges on this contract.
 
 `Ownable` in this contract does not gate any token-supply or transfer logic — `GNGAToken.sol` defines no owner-only functions beyond what OpenZeppelin's base contracts expose (`renounceOwnership`, `transferOwnership`). It is present because the OpenZeppelin Wizard template includes it by default, not because the token relies on owner-gated functionality.
 
